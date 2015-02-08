@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){var t="Enter bio text:";$("<p>"+t+"</p>").insertAfter("#titlediv")});

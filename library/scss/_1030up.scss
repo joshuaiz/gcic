@@ -1,0 +1,33 @@
+/******************************************************************
+Site Name: J
+Author: 
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+.home .acf-bios .bios-list li, .home-new .acf-bios .bios-list li, .home-test .acf-bios .bios-list li {
+	margin-bottom: 0;
+}
+
+.header .nav li a { 
+	font-size: 14px !important; 
+	-webkit-transition: all 0.4s ease-in-out;
+  	-moz-transition: all 0.4s ease-in-out;
+  	transition: all 0.4s ease-in-out;
+}
+
+.home #quotes li {
+	font-size: 1.2em;
+}
+
+.home .callout {
+	margin-top: 100px;
+}
+
+// .header #logo img {
+// 	width: 383px;
+// 	height: auto;
+// }

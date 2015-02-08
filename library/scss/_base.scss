@@ -1,0 +1,1544 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	font-family: $serif;
+	font-size: 100%;
+	line-height: 1.5;
+	color: #565656;
+}
+
+.tab-header {
+	width: 170px;
+	background: #0b87c9;
+	text-align: center;
+	padding: 8px 4px 8px;
+	line-height: 24px;
+	border-radius: 0px 0px 4px 4px;
+	color: #fff !important;
+}
+
+.header-outer {
+	background: #C8C2BF;
+}
+
+.impact { color: #CC3599 }
+.impact2 a { 
+	color: #CC3599 !important; 
+	font-weight: bold;
+	&:hover, &:focus { color: $link-hover !important; }
+	
+}
+.impact3 { color: #CC3599; font-weight: bold; font-family: $sans-serif; text-transform: uppercase; }
+
+ul.tab-content {
+	background: #fff;
+	padding: 1em 2em;
+	margin: 0;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+color: #555555;
+background-color: #ffffff;
+border: 0 !important;
+border-bottom-color: transparent;
+cursor: default;
+}
+
+.tabbable {
+	.nav li a { font-family: $sans-serif; text-transform: uppercase; padding: 1em 2em; background: #ddd; border: 0; margin-right: 10px; }
+	.nav li.active a { background: #fff; }
+	.nav>li>a:hover, .nav>li>a:focus {
+		text-decoration: none;
+		background-color: #ccc;
+	}
+	.nav li.active a:hover, .nav li.active a:focus {
+		background: #fff;
+		color: #CC3599;
+	}
+} 
+
+.nav-tabs>li {
+	margin-bottom: 0px !important;
+}
+
+.tab-content > .active, .pill-content > .active {
+	padding: 0 0 2em;
+}
+.tab-group {
+	font-size: 85%;
+	
+}
+
+// .partner {
+// 	margin-bottom: 2em;
+
+// 	img {
+// 		width: 200px !important;
+// 		height: auto !important;
+// 	}
+// 	img.partner-logo-large {
+// 		width: 300px !important;
+// 	}
+// 	img.partner-logo-small {
+// 		width: 150px !important;
+// 	}
+// }
+
+input#s {
+	font-family: 'Lato';
+	height: 31px;
+	position: relative;
+	top: 2px;
+	width: 60%;
+}
+
+.pdf-img {
+	width: 33px;
+	height: 41px;
+	float: left;
+	margin-right: 12px !important;
+	&:hover, &:focus { opacity: 0.7; }
+}
+
+.project-download {
+	margin: 0 0 1em;
+	span { 
+		font-family: 'Lato';
+		position: relative;
+		top: 8px;
+	}
+}
+
+.project-close, .impact-close {
+	// margin-top: 1em;
+	font-size: 1.5em;
+	padding: .5em 1em;
+}
+
+.x-close, .cs-close {
+	position: absolute;
+	// top: -20px;
+	right: -5px;
+	font-family: $sans-serif;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.impact-target .x-close {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		font-family: $sans-serif;
+		font-weight: 700;
+}
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+
+.home, .home-new, .home-test {
+	.callout {
+		position: relative;
+		img {
+			height: auto;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	#content { 
+		margin-top: 0;
+		// padding-top: 2em;
+		background: none repeat scroll 0 0 #B1D9ED; 
+	}
+	.acf-services {
+		background: #fff;
+		margin-top: -6px;
+	}
+	.services-wrap {
+		margin: 2.2em 0;
+	}
+	.service-more {
+		display: none;
+	}
+	h3 { color: #BF0280; }
+	.acf-case-studies {
+		background: lighten(#B1D9ED, 10%);
+		min-height: 200px;
+	}
+	.case-studies-wrap {
+		margin: 3.3em 0 1em;
+		h2 { color: #BF0280; }
+		ul.grid {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			li { margin-bottom: 1.5em; z-index: 99; }
+		}
+		.case-study-content {
+			display: none; 
+			text-align: left;
+		}
+		.cs-active {
+			figure {
+				margin-bottom: 1.5em;
+				img {
+					-webkit-transform: translateY(0px) !important;
+					-moz-transform: translateY(0px) !important;
+					-ms-transform: translateY(0px) !important;
+					transform: translateY(0px) !important;
+				}
+			}
+			figcaption { 
+				display: none; 
+				text-align: left;
+			}
+		}
+	}
+
+	.acf-testimonials {
+		background: #05334c;
+		.testimonial-image img {
+			border-radius: 75px;
+			width: 75px;
+			height: 75px;
+		}
+		.testimonial-author { color: #fcbe1a; font-family: $sans-serif; }
+		.author-title { font-style: italic; font-size: .75em; color: #C8C2BF; font-family: $sans-serif; }
+		.author-company { font-size: .875em; color: #0b87c9; }
+	}
+
+	.acf-bios {
+		-webkit-transition: all 0.4s ease-in-out;
+  		-moz-transition: all 0.4s ease-in-out;
+  		transition: all 0.4s ease-in-out;
+  		background: #efefef;
+  		z-index: 99;
+		.bios-wrap {
+			margin: 2.2em 0;
+		}
+		.bio-more {
+			cursor: pointer;
+			&:hover, &:focus {
+					color: lighten(#BF0280, 15%);
+				}
+		}
+		.bios-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			margin: 0 0 2.2em;
+			padding: 0;
+		
+			li {
+				text-align: center;
+				z-index: 99;
+				position: relative;
+				margin-bottom: 2.2em;
+				
+				.back-arrow {
+					display: none;
+				}
+		}
+	}
+	.bio-image {
+		img {
+				border-radius: 150px;
+				width: 150px;
+				height: 150px;
+				-webkit-transition: all 0.4s ease-in-out;
+  				-moz-transition: all 0.4s ease-in-out;
+  				transition: all 0.4s ease-in-out;
+				&:hover, &:focus {
+					opacity: 0.8;
+				}
+			}
+		}
+		.bio-meta {
+			h3 { margin-bottom: 0; font-family: $serif; text-transform: none; }
+			h4 { margin-bottom: 0; 
+				// font-family: $serif;
+				font-style: italic; 
+				text-transform: none; 
+				font-weight: 300; 
+				font-size: .875em; 
+				color: lighten(#05334c, 20%);
+			}
+		}
+		.bio-content {
+			display: none;
+		}
+		.experience-intro {
+			max-width: 800px;
+			font-size: .81em;
+			margin: 0 auto;
+		}
+		.bio-active {
+			text-align: left;
+			-webkit-transition: all 0.4s ease-in-out;
+  				-moz-transition: all 0.4s ease-in-out;
+  				transition: all 0.4s ease-in-out;
+			.back-arrow { 
+				color: #aaa;
+				display: block !important;
+				position: absolute;
+				cursor: pointer;
+				left: 0;
+				top: -40px;
+				&:hover, &:focus {
+					color: #ccc;
+				}
+			}
+			.bio-outer {
+				max-width: 800px;
+			}
+			.bio-image {
+				float: left;
+				margin-right: 1.5em;
+				img {
+					-webkit-transition: all 0.4s ease-in-out;
+  					-moz-transition: all 0.4s ease-in-out;
+  					transition: all 0.4s ease-in-out;
+				}
+			}
+			.bio-title {
+				margin-bottom: 1em;
+			}
+			.bio-content-active, .bio-meta, .bio-content ul li {
+				text-align: left;
+				-webkit-transition: all 0.4s ease-in-out;
+  				-moz-transition: all 0.4s ease-in-out;
+  				transition: all 0.4s ease-in-out;
+			}
+		}
+
+		
+
+	}
+	.impact-close { position: relative; }
+	// .impact-target { display: none; position: relative; }
+	// .project-target { display: none; }
+	// .project-active h2 { color: #CC3599; font-weight: 600; margin-top: -9px; }
+	// .project-active { display: block; }
+	figcaption span { font-size: 12px; }
+
+	
+	
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-top: 14px solid #f3f3f3;
+	position: relative;
+	left: 23px;
+}
+
+.acf-partners {
+			.partners-list {
+				display: flex;
+				justify-content: space-around;
+				flex-wrap: nowrap;
+				// height: 170px;
+				margin: 2.2em 0;
+				li {
+					max-width: 170px;
+					// line-height: 170px;
+					padding: 0 10px;
+					&:nth-of-type(2) {
+						line-height: 84% !important;
+						img {
+						max-width: 84% !important;
+						height: auto;
+						line-height: auto;
+						// width: 120%;
+
+						}
+					}
+					img {
+						max-width: 100%;
+						height: auto;
+						&:hover, &:focus {
+							opacity: 0.8;
+						}
+					}
+				}
+			}
+		}
+
+.experience-outer {
+	position: relative;
+	z-index: 0;
+	height: auto;
+  	min-height: 600px;
+	overflow: hidden;
+	background-size: cover;
+	// background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url("../images/impact_bg_pink2.png");
+
+	.experience-intro {
+		// color: #B1D9ED;
+		color: #f5f5f5;
+		padding: 9%;
+		position: absolute;
+		p {
+			// background: rgba(0,0,0,.5);
+			background: rgba(3, 26, 38, 0.7);
+			font-size: 18px;
+			position: fixed;
+			top: 100px;
+			max-width: 77%;
+			padding: 1em;
+			z-index: 0;
+		}
+	}
+	.experience-bg-img {
+		display: none;
+	}
+}
+
+}                          /* home page */
+
+
+.blog {
+	.attachment-custom_thumb { display: none; }
+	.thumbnail-wrapper { float: left; margin-right: 1em; }
+	article.hentry { margin-bottom: 2em; }
+	article h3 { text-transform: none; }
+}                          /* blog template page */
+.archive {}                       /* archive page */
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.search {}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+.error404 {}                      /* 404 page */
+.single {
+	h2.single-title { color: #064465; }
+}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+.text-link {
+	cursor: pointer;
+	font-size: .875em;
+	font-family: $sans-serif;
+	z-index: 99;
+}
+
+.client-list-wrap {
+	z-index: 99;
+	position: relative;
+}
+.client-list {
+	display: none;
+	.impact2 {
+		color: #BF0280;
+		font-family: $serif;
+	}
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+	text-decoration: none;
+	outline: 0;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+		text-decoration: none;
+		outline: 0;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: $sans-serif;
+	text-rendering: optimizelegibility;
+	font-weight: 500;
+	text-transform: uppercase;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+	z-index: 9999;
+}
+
+	#logo {}
+	
+	#logo-mobile {}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.nav {
+	/* border: 1px solid #ccc; */
+	border: 0; // [added by JM] No borders on the menus
+	border-bottom: 0;
+	
+
+	li {
+
+		a {
+			display: block;
+			text-decoration: none;
+			padding: 10px 10px;
+			/* background-color: #eee; */
+			background: none; 
+			/* border-bottom: 1px solid #ccc; */
+			border-bottom: 0; // [added by JM] No borders on the menus
+			
+
+			/*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+			&:hover, &:focus {
+
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		/*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+		ul.sub-menu,
+		ul.children {
+
+			li {
+
+				a {
+					padding-left: 30px;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}
+
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+
+		a {}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+#content {
+	margin-top: 2.2em;
+}
+
+		.hentry {
+
+			header {}
+
+			footer {}
+
+		} /* end .hentry */
+
+		.single-title,
+		.page-title {}
+
+		.single-title {}
+
+		.page-title {}
+
+		.archive-title { }
+
+		/* want to style individual post classes? Booya! */
+		.post-id {}         /* post by id (i.e. post-3) */
+		.post {}            /* general post style */
+		.page {}            /* general article on a page style */
+		.attachment {}      /* general style on an attatchment */
+		.sticky {}          /* sticky post style */
+		.hentry {}          /* hentry class */
+		.category-slug {}   /* style by category (i.e. category-videos) */
+		.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+		/* post meta */
+		.byline {
+			color: #999;
+
+			time {}
+		}
+
+		/* entry content */
+		.entry-content {
+
+			p {}
+
+
+			ul, ol, table, dl {}
+
+			ul, ol {
+
+				li {}
+
+			}
+
+			ul.ul-methods {
+				list-style-type: none;
+				padding-left: 0;
+				
+
+				li {}
+				
+				li:before {
+					content: "■ ";
+					color: #CC3599;
+					font-size: 10px;
+					position: relative;
+					top: -3px;
+					margin-right: 8px;
+				}
+
+			}
+
+			ol {
+
+				li {}
+
+			}
+
+			blockquote {
+
+				&:before {}
+
+			}
+
+			dl {}
+
+			dt {}
+
+			dd {
+				margin-left: 0;
+				font-size: 0.9em;
+				color: #787878;
+				margin-bottom: 1.5em;
+			}
+
+			img {
+				/* margin: 0 0 1.5em 0; */
+				/*	[added by JM] If you are including your
+					images in posts through WP, margins are
+					set by .alignleft or .alignright
+				*/
+				margin: 0; 
+				max-width: 100%;
+				height: auto;
+			}
+
+			/*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+			.alignleft, img.alignleft {}
+			.alignright, img.alignright {}
+			.aligncenter, img.aligncenter {}
+
+			video, object {
+				max-width: 100%;
+				height: auto;
+			}
+
+			pre {
+				background: #eee;
+				border: 1px solid #cecece;
+				padding: 10px;
+			}
+
+		} /* end .entry-content */
+
+		.wp-caption {
+			max-width: 100%;
+			background: #eee;
+			padding: 5px;
+
+			/* images inside wp-caption */
+			img {
+				max-width: 100%;
+				margin-bottom: 0;
+				width: 100%;
+			}
+
+			p.wp-caption-text {
+				font-size: 0.85em;
+				margin: 4px 0 7px;
+				text-align: center;
+			}
+
+		} /* end .wp-caption */
+
+		/* image gallery styles */
+		.gallery {
+
+			dl {
+
+				a {}
+
+				img {}
+
+			}
+
+			dt {}
+
+			dd {}
+
+		} /* end .gallery */
+
+		/* gallery caption styles */
+		.gallery-caption {}
+
+		.size-full {}
+		.size-large {}
+		.size-medium {}
+		.size-thumbnail {}
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+
+.pagination,
+.wp-prev-next {
+	margin: 1.1em 0 2.2em;
+}
+	.pagination{
+        text-align: center;
+        ul {
+            display: inline-block;
+            white-space: nowrap;
+            padding:0;
+            clear: both;
+            margin: 1px;
+            li {
+                padding: 0;
+                margin: 0;
+                float: left;
+                display: inline;
+                overflow: hidden;
+                a, span {
+                    margin: 0;
+                    text-decoration: none;
+                    padding: 0;
+                    line-height: 1em;
+                    font-size: 1em;
+                    font-weight: normal;
+                    padding: .5em;
+                    min-width: 1em;
+                    display: block;
+                }
+                span.current{
+                	font-weight: bold;
+                }
+                a:hover, a:focus {
+                    
+                }
+            }
+        }
+    } /* end .bones_page_navi */
+
+	/* fallback previous & next links */
+	.wp-prev-next {
+
+		ul {}
+
+		.prev-link {
+			float: left;
+		}
+
+		.next-link {
+			float: right;
+		}
+
+	} /* end .wp-prev-next */
+
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+
+/* h3 comment title */
+#comments {
+
+	/* number of comments span */
+	span {}
+
+}
+
+.comment-nav {
+
+	ul {
+
+		li {}
+
+	}
+}
+
+
+.commentlist {
+
+	li {
+		position: relative;
+		clear: both;
+		overflow: hidden;
+		list-style-type: none;
+		margin-bottom: 1.5em;
+		padding: 0.7335em 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		ul.children {
+			margin: 0;
+
+			li {}
+
+			/* variations */
+			.comment {}
+			.alt {}
+			.odd {}
+			.even {}
+			.depth-1 {}           /* change number for different depth */
+			.byuser {}
+			.bypostauthor {}
+			.comment-author-admin {}
+
+		} /* end .commentlist li ul.children */
+	}
+
+	li[class*=depth-] {
+		margin-top: 1.1em;
+	}
+
+	li.depth-1 {
+		margin-left: 0;
+		margin-top: 0;
+	}
+
+	li:not(.depth-1) {
+		margin-right: -10px;
+		margin-left: -10px;
+		margin-top: 0;
+		padding-bottom: 0;
+	}
+
+	li.depth-2 {}
+	li.depth-3 {}
+	li.depth-4 {}
+	li.depth-5 {}
+
+	/* general comment classes */
+	.alt {}
+	.odd {
+		background: #eee;
+	}
+	.even {
+		background: #fefefe;
+	}
+	.parent {}
+	.comment {}
+	.children {}
+	.pingback {}
+	.bypostauthor {}
+	.comment-author {}
+	.comment-author-admin {}
+	.thread-alt {}
+	.thread-odd {}
+	.thread-even {}
+
+	/* vcard */
+	.vcard {
+		margin-left: 50px;
+
+		cite.fn {
+			font-weight: 700;
+			font-style: normal;
+
+			a.url {}
+
+		}
+
+		time {
+			float: right;
+
+			a {
+				color: #999;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+			}
+
+		}
+
+		img.photo {}
+
+		img.avatar {
+			position: absolute;
+			left: 10px;
+			padding: 2px;
+			border: 1px solid #cecece;
+			background: #fff;
+		}
+
+	} /* end .commentlist .vcard */
+
+
+	/* comment meta */
+	.comment-meta {
+
+		a {}
+
+	}
+
+	.commentmetadata {
+
+		a {}
+
+	}
+
+	/* comment content */
+	.comment_content {
+		margin-left: 50px;
+
+		p {
+			margin: 0.7335em 0 1.5em;
+			font-size: 1em;
+			line-height: 1.5em;
+		}
+
+	} /* end .commentlist .comment_content */
+
+	/* comment reply link */
+	.comment-reply-link {
+		text-decoration: none;
+		float: right;
+		background: #4598bb;
+		padding: 3px 5px;
+		color: #fff;
+		opacity: 0.65;
+		margin-bottom: 10px;
+		font-weight: 700;
+		font-size: 0.9em;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+
+	} /* end .commentlist .comment-reply-link */
+
+} /* end .commentlist */
+
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+
+.respond-form {
+	margin: 1.5em 10px;
+	padding-bottom: 2.2em;
+
+	form {
+		margin: 0.75em 0;
+
+		li {
+			list-style-type: none;
+			clear: both;
+			margin-bottom: 0.7335em;
+
+			label,
+			small {
+				display: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url],
+		textarea {
+			padding: 3px 6px;
+			background: #efefef;
+			border: 2px solid #cecece;
+			line-height: 1.5em;
+
+			&:focus {
+				background: #fff;
+			}
+
+			/* form validation */
+			&:invalid {
+				outline: none;
+				border-color: #fbc2c4;
+				background-color: #f6e7eb;
+				-webkit-box-shadow: none;
+				   -moz-box-shadow: none;
+				    -ms-box-shadow: none;
+						box-shadow: none;
+			}
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=url] {
+			max-width: 400px;
+			min-width: 250px;
+		}
+
+		textarea {
+			resize: none;
+			width: 97.3%;
+			height: 150px;
+		}
+
+	}
+}
+
+	/* comment submit button */
+	#submit {}
+
+	/* comment form title */
+	#comment-form-title {
+		margin: 0 0 1.1em;
+	}
+
+	/* cancel comment reply link */
+	#cancel-comment-reply {
+		a {}
+	}
+
+	/* logged in comments */
+	.comments-logged-in-as {}
+
+	/* allowed tags */
+	#allowed_tags {
+		margin: 1.5em 10px 0.7335em 0;
+	}
+
+	/* no comments */
+	.nocomments {
+		margin: 0 20px 1.1em;
+	}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+// .sidebar { display: none; }
+
+	.widgettitle {}
+
+	.widget {
+
+		ul {
+
+			li {
+
+				&:first-child {}
+
+				&:last-child {}
+
+				a {}
+
+				/* deep nesting */
+				ul {}
+
+			}
+
+		}
+
+	}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	clear: both;
+	background: #064465;
+	padding: 1.5em 0 0;
+	border-top: 12px solid #E0CFB8;
+}
+
+	/*
+	if you checked out the link above:
+	http://www.alistapart.com/articles/organizing-mobile/
+	you'll want to style the footer nav
+	a bit more in-depth. Remember to keep
+	it simple because you'll have to
+	override these styles for the desktop
+	view.
+	*/
+	.footer-links {
+
+		ul {
+
+			li {}
+
+		}
+
+	} /* end .footer-links */
+
+
+	.copyright {}
+	
+	#colophon { 
+		color: #C8C2BF;
+		font-size: 12px;
+		font-family: $sans-serif;
+	}
+
+
+
+
+
+.slide {
+	clear: left;
+	width: 100%;
+	position: relative;
+}
+
+.testimonial-quote {
+	background: #ffdead;
+	padding: 1.5em;
+	font-style: italic;
+	font-size: 1.1em;
+	color: #064465;
+	border-radius: 4px;
+	p { margin-bottom: 0; }
+}
+	
+
+// .testimonial-image {
+// 	width: 32px;
+// 	float: left;
+// 	margin-right: 10px;
+// 	position: relative;
+// 	top: 10px;
+	
+// }
+
+.client-contact-info { 
+	position: relative;
+	top: 12px; 
+	color: #fff;
+	
+}
+
+.arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 14px solid transparent;
+	border-right: 14px solid transparent;
+	border-top: 14px solid #ffdead;
+	position: relative;
+	left: 23px;
+}
+
+#quotes  {
+	position: absolute;
+	
+	// max-width: 800px;
+	// width: 100%;
+	
+	display: none;
+	z-index: 99;
+	li { color: #05334c; }
+}
+
+.hms-testimonial-group {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	img { border-radius: 96px; }
+	.author { font-size: 14px; }
+	.paging { display: none; }
+}
+
+.testimonial-outer {
+	text-align: center;
+}
+
+.testimonial {
+	position: relative;
+	padding: 20px;
+	margin: 0 10px 20px!important;
+	font-style: normal;
+	font-weight: 300;
+	color: #595c61;
+	border-radius: 5px;
+	// max-width: 300px;
+	// border: 1px solid #ccc;
+	background: #fff;
+	text-align: left;
+	font-size: 14px;
+	min-height: 185px;
+	height: auto;
+	strong { color: $plum; }
+	p { margin: 0; }
+}
+
+.testimonial:after, .testimonial:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.testimonials-outer {
+	padding: 3em 0 0;
+	background: #401739;
+	.testimonial-author { 
+		margin-bottom: 3em;
+		color: #e5e2d4;
+		font-weight: 600;
+		font-size: 15px;
+	}
+	.author-title {
+		// color: $lilac;
+		font-style: italic;
+		font-size: 13px;
+	}
+	.author-company-link {
+		color: #fbb157;
+		font-size: 13px;
+	}
+}
+
+.testimonial:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.testimonial:before {
+	border-color: rgba(204, 204, 204, 0);
+	border-top-color: #ccc;
+	border-width: 9px;
+	margin-left: -9px;
+}
+
+// .testimonial > a { display: none; }
+
+
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/* 
+ *  Core Owl Carousel CSS File
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+}
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-controls .owl-nav .owl-prev,
+.owl-carousel .owl-controls .owl-nav .owl-next,
+.owl-carousel .owl-controls .owl-dot {
+  cursor: pointer;
+  cursor: hand;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-prev { 
+	float: left; 
+	opacity: 0.2;
+}
+.owl-next { 
+	float: right; 
+	opacity: 0.2;
+}
+
+.owl-nav {
+	font-size: 2em;
+	color: #fff;
+}
+
+.owl-theme .owl-controls {
+	margin-top: 0 !important;
+	position: relative;
+	top: -160px;
+
+}
+
+.owl-carousel.owl-loaded {
+  display: block;
+}
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+.owl-carousel .owl-refresh .owl-item {
+  display: none;
+}
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.owl-carousel .owl-item img {
+  // display: block;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+}
+.owl-carousel.owl-text-select-on .owl-item {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+.owl-carousel .owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
